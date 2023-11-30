@@ -19,7 +19,7 @@ function fillcut(str, len) {
      if (str.length > len) {
          return str.slice(0, len)
      } else if (str.length < len) {
-          return ".".padStart(4, ".", len - str.length) + str 
+        return str.padStart(len, '.')
           } else {
          return str
      }
@@ -30,7 +30,7 @@ function fillcut(str, len) {
  const vysledek = fillcut(str, len)
 
  document.body.innerHTML += `
- <p> ${fillcut("Vladka", 10) } </p>
+ <p> ${fillcut("Vladka", 15) } </p>
  <p> ${fillcut("Vladka", 3) } </p>
  <p> ${fillcut("Vladka", 6) } </p>
  `
